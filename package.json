@@ -2,8 +2,13 @@
   "name": "parks_and_plants",
   "private": true,
   "dependencies": {
+    "@rails/webpacker": "3.5",
     "bootstrap": "^4.4.1",
     "jquery": "^3.4.1",
-    "popper.js": "^1.16.1"
+    "popper.js": "^1.16.1",
+    "select2": "^4.0.13"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "2.11.2"
   }
 }

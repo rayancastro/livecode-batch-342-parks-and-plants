@@ -9,6 +9,16 @@
   <div class="cards">
     <% @garden.plants.each do |plant| %>
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= plant.image_url %>)">
+
+        <!-- Tags for the plant -->
+        <div class="card-tags">
+          <% plant.tags.each do |tag| %>
+            <span><%= tag.name %></span>
+          <% end %>
+          <%= link_to "+", new_plant_plant_tag_path(plant) %>
+        </div>
+
+        <!-- Plant info -->
         <%= plant.name %>
         <%= link_to plant_path(plant), method: :delete, data: { confirm: "Are you sure?" } do %>
           <div class="delete-button">Delete</div>

@@ -1,0 +1,7 @@
+class Tag < ApplicationRecord
+  # Associations
+  has_many :plant_tags, dependent: :destroy
+  has_many :plants, through: :plant_tags
+  # Validations
+  validates :name, presence: true, uniqueness: true
+end
